@@ -66,15 +66,8 @@ app.post("/api/createcontact", async (req, res) => {
   }
 });
 
-app.get("/", async (req, res) => {
-  
-
-  try {
-  
-    res.json("Server is running");
-  } catch (error) {
-    res.status(500).json({ error: error.message });
-  }
+app.get('/', (req, res) => {
+  res.send('Hello World!');
 });
 
 app.listen(port, () => {
